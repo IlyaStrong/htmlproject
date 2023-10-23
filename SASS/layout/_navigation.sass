@@ -70,12 +70,12 @@
 
     &__icon
         position: relative
-        margin-top: 37px
+        margin-top: 3.7rem
         &,
         &::before,
         &::after
-            width: 30px
-            height: 2px
+            width: 3rem
+            height: .2rem
             background-color: $color-black
             display: inline-block
         &::before,
@@ -85,14 +85,14 @@
             left: 0
             transition: all .2s
         &::before
-            top: -10px
+            top: -1rem
         &::after
-            top: 10px
+            top: 1rem
 
     &__button:hover &__icon::before
-        top: -12px
+        top: -1.2rem
     &__button:hover &__icon::after
-        top: 12px    
+        top: 1.2rem   
 
     &__toggle:checked + &__button &__icon
         background: transparent

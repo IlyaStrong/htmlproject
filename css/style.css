@@ -34,6 +34,14 @@
     transform: translateX(0rem);
   }
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes BtnToUp {
   0% {
     opacity: 0;
@@ -70,6 +78,14 @@
     transform: translateX(0rem);
   }
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 *, ::after, ::before {
   margin: 0;
   padding: 0;
@@ -78,6 +94,21 @@
 
 html {
   font-size: 62.5%;
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 56%;
+  }
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 30%;
+  }
 }
 
 body {
@@ -111,9 +142,14 @@ body {
   margin-bottom: 1rem;
   animation-name: leftToRight;
   animation-duration: 2s;
-  animation-delay: 2s;
+  animation-delay: 0s;
   animation-timing-function: ease;
   backface-visibility: hidden;
+}
+@media (max-width: 1200px) {
+  .title-first__main {
+    font-size: 4rem;
+  }
 }
 .title-first__secondary {
   display: block;
@@ -122,11 +158,17 @@ body {
   line-height: 4.8rem;
   letter-spacing: 0.5rem;
   animation-name: RightToLeft;
-  animation-duration: 2s;
-  animation-delay: 2s;
+  animation-duration: 2.5s;
+  animation-delay: 0s;
   animation-timing-function: ease;
   backface-visibility: hidden;
   margin-bottom: 1rem;
+}
+@media (max-width: 1200px) {
+  .title-first__secondary {
+    font-size: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
 }
 .title-first__third {
   display: block;
@@ -136,7 +178,7 @@ body {
   letter-spacing: 0.5rem;
   animation-name: leftToRight;
   animation-duration: 2s;
-  animation-delay: 2s;
+  animation-delay: 0s;
   animation-timing-function: ease;
   backface-visibility: hidden;
   margin-bottom: 5rem;
@@ -152,6 +194,12 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   transition: all 0.4s;
+  backface-visibility: hidden;
+}
+@media (max-width: 1200px) {
+  .title-secondary {
+    font-size: 3rem;
+  }
 }
 .title-secondary:hover {
   transform: scale(1.1);
@@ -167,12 +215,22 @@ body {
   text-transform: uppercase;
   font-weight: 700;
 }
+@media (max-width: 1200px) {
+  .title-third {
+    font-size: 1.8rem;
+  }
+}
 
 .paragraph {
   font-size: 1.6rem;
   letter-spacing: 0.2rem;
   line-height: 140%;
   font-weight: 400;
+}
+@media (max-width: 1200px) {
+  .paragraph {
+    font-size: 1.5rem;
+  }
 }
 
 .text-align-center {
@@ -207,6 +265,12 @@ body {
   position: relative;
   font-size: 2rem;
   border: none;
+}
+@media (max-width: 1200px) {
+  .btn, .btn:link, .btn:visited {
+    font-size: 1.8rem;
+    padding: 1.2rem 3.7rem;
+  }
 }
 .btn:hover {
   transform: translateY(-0.4rem);
@@ -416,6 +480,7 @@ body {
   color: #777777;
   border-bottom: 1px solid #777777;
   display: inline-block;
+  font-size: 1.5rem;
 }
 .card-tour__descr ul li:not(:last-child) {
   margin-bottom: 2rem;
@@ -522,7 +587,7 @@ body {
 }
 
 .form {
-  width: 60%;
+  width: 70%;
   padding-top: 5rem;
   padding-left: 5rem;
 }
@@ -531,6 +596,12 @@ body {
 }
 .form__group:nth-child(4) {
   margin-bottom: 4rem;
+}
+.form__group:not(:last-child) {
+  margin-bottom: 0;
+}
+.form__group:nth-child(4) {
+  margin-bottom: 2.5rem;
 }
 .form__input {
   font-size: 1.6rem;
@@ -574,8 +645,18 @@ body {
   transform: translateY(-3rem);
 }
 .form__group-radio {
-  width: 40%;
   display: inline-block;
+}
+.form__group-radio:not(:last-child) {
+  margin-right: 2rem;
+}
+@media (max-width: 1200px) {
+  .form__group-radio {
+    display: block;
+  }
+}
+.form__group-radio:not(:last-child) {
+  margin-bottom: 2rem;
 }
 .form__input-radio {
   display: none;
@@ -625,6 +706,16 @@ body {
   display: table;
   clear: both;
 }
+@media (max-width: 1200px) {
+  .row {
+    font-size: 90.1rem;
+  }
+}
+@media (max-width: 900px) {
+  .row {
+    font-size: 60rem;
+  }
+}
 
 .col-1-of-2 {
   width: calc((100% - 6rem) / 2);
@@ -633,13 +724,22 @@ body {
 .col-1-of-3 {
   width: calc((100% - 2 * 6rem) / 3);
 }
-
-.col-2-of-3 {
-  width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+@media (max-width: 1200px) {
+  .col-1-of-3 {
+    width: calc((100% - 2 * 2rem) / 3);
+  }
 }
 
+.col-2-of-3 {
+  width: calc(2 * (100% - 2 * 6rem) / 3);
+}
 .col-1-of-4 {
   width: calc((100% - 3 * 6rem) / 4);
+}
+@media (max-width: 1200px) {
+  .col-1-of-4 {
+    width: calc((100% - 3 * 2rem) / 4);
+  }
 }
 
 .col-2-of-4 {
@@ -656,6 +756,16 @@ body {
 [class^=col-]:not(:last-child) {
   margin-right: 6rem;
 }
+@media (max-width: 1200px) {
+  [class^=col-]:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+@media (max-width: 900px) {
+  [class^=col-] {
+    widows: 100%;
+  }
+}
 
 .header {
   position: relative;
@@ -663,6 +773,7 @@ body {
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url(../img/six.jpg) center/cover no-repeat;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  animation: fadeIn 1.5s ease;
 }
 .header__logo {
   position: absolute;
@@ -678,8 +789,8 @@ body {
   transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
+  top: 50%;
 }
-
 .footer {
   padding: 8rem;
   background: #333333;
@@ -696,6 +807,11 @@ body {
 }
 .footer__item:not(:last-child) {
   margin-right: 5rem;
+}
+@media (max-width: 1200px) {
+  .footer__item:not(:last-child) {
+    margin-right: 1.6rem;
+  }
 }
 .footer__link:link, .footer__link:visited {
   color: #777777;
@@ -790,11 +906,11 @@ body {
 }
 .navigation__icon {
   position: relative;
-  margin-top: 37px;
+  margin-top: 3.7rem;
 }
 .navigation__icon, .navigation__icon::before, .navigation__icon::after {
-  width: 30px;
-  height: 2px;
+  width: 3rem;
+  height: 0.2rem;
   background-color: #000000;
   display: inline-block;
 }
@@ -805,16 +921,16 @@ body {
   transition: all 0.2s;
 }
 .navigation__icon::before {
-  top: -10px;
+  top: -1rem;
 }
 .navigation__icon::after {
-  top: 10px;
+  top: 1rem;
 }
 .navigation__button:hover .navigation__icon::before {
-  top: -12px;
+  top: -1.2rem;
 }
 .navigation__button:hover .navigation__icon::after {
-  top: 12px;
+  top: 1.2rem;
 }
 .navigation__toggle:checked + .navigation__button .navigation__icon {
   background: transparent;
@@ -832,6 +948,11 @@ body {
   padding-top: 8rem;
   margin-bottom: 20rem;
 }
+@media (max-width: 1200px) {
+  .section-about {
+    margin-bottom: 13rem;
+  }
+}
 
 .section-adventure {
   padding: 21rem 0;
@@ -840,6 +961,11 @@ body {
 }
 .section-adventure > * {
   transform: skewY(-7deg);
+}
+@media (max-width: 1200px) {
+  .section-adventure {
+    padding: 15rem 0;
+  }
 }
 
 .section-tour {
